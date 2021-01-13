@@ -1,0 +1,45 @@
+name: bloc_kickoff
+description: Simple Flutter app setup to kickoff a Bloc driven project fast and easy
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ui
+  percent_indicator: ^2.1.9
+  cupertino_icons: ^1.0.1
+  google_fonts: ^1.1.1
+
+  # architecture
+  flutter_bloc: ^6.1.1
+  rxdart: ^0.24.1
+  equatable: ^1.2.5
+
+  # platform
+  shared_preferences: ^0.5.12+4
+  flutter_local_notifications: ^1.4.4+1
+
+  # utils
+  logger: ^0.9.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # testing
+  mockito: ^4.1.1
+  bloc_test: ^7.0.4
+
+integration_test:
+  sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
