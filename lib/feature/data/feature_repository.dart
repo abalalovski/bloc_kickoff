@@ -15,6 +15,14 @@ class FeatureRepository implements AbsRepository {
   @override
   Stream<String> getTitle() => _dataSource.retrieve().asStream();
 
+  final arr1 = [1, 2, 3, 4];
+  final arr2 = [3, 4, 5, 6];
+
   @override
-  Stream<void> updateTitle(String title) => _dataSource.save(title).asStream();
+  Stream<void> updateTitle(String title) {
+    return _dataSource.save(title).asStream();
+  }
+
+  bool function(List<int> arr1, List<int> arr2) =>
+      arr1.any((element) => arr2.contains(element));
 }

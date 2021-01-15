@@ -13,8 +13,8 @@ class FeatureBottomSheetWidget extends StatefulWidget {
 }
 
 class _FeatureBottomSheetState extends State<FeatureBottomSheetWidget> {
-  final _dailyGoalController = TextEditingController();
-  final _gailyGoalFocusNode = FocusNode();
+  final _textController = TextEditingController();
+  final _textFocusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -37,8 +37,8 @@ class _FeatureBottomSheetState extends State<FeatureBottomSheetWidget> {
                       child: TextField(
                         keyboardType: TextInputType.number,
                         textInputAction: TextInputAction.done,
-                        controller: _dailyGoalController,
-                        focusNode: _gailyGoalFocusNode,
+                        controller: _textController,
+                        focusNode: _textFocusNode,
                         autofocus: true,
                         style: GoogleFonts.sourceSansPro(
                           color: Colors.black87,
@@ -74,7 +74,7 @@ class _FeatureBottomSheetState extends State<FeatureBottomSheetWidget> {
                         vertical: 12,
                       ),
                       onPressed: () {
-                        Navigator.pop(context, _dailyGoalController.text);
+                        Navigator.pop(context, _textController.text);
                       },
                       color: ColorPalette.of(context).lightGray,
                       shape: RoundedRectangleBorder(
